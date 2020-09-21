@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.nav-link {
+  font-size: large;
+  background-color: rgb(231, 231, 231);
+  padding: 100px auto;
+  display: block;
+  color: #000;
+  padding: 12px 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+#navbar > ul {
+  margin-top: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+hr {
+  border: 2px solid red;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 20%;
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 80%;
+  padding-bottom: 10%;
+}
+
+li a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+#navbar > header {
+  top: 0;
+  font-size: 200%;
+  margin: 0;
+  font-weight: bolder;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: red;
+  position: sticky;
+  border: 1px solid black;
+}
+
+.main-section {
+  width: 100%;
+}
+
+.main-section > header {
+  font-size: 150%;
+  font-weight: bolder;
+  color: black;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px red;
+}
+
+code {
+  display: block;
+  background-color: rgb(231, 227, 227);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-weight: bolder;
+  color: #000;
+  font-size: larger;
+}
+
+article > ul {
+  margin: 0 2%;
+  width: 98%;
+}
+
+.child-list {
+  margin: 0 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    position: sticky;
+    top: 0;
+  }
+
+  #navbar > ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    height: 100%;
+    background-color: rgb(231, 231, 231);
+  }
+
+  #nav-list > li {
+    list-style: none;
+    background-color: #4caf50;
+  }
+
+  .nav-link > a {
+    font-size: xx-small;
+    font-weight: 100;
+  }
+
+  .nav-link {
+    background-color: rgb(231, 231, 231);
+    height: 100%;
+    font-size: x-small;
+    list-style: none;
+    padding: 0;
+  }
+
+  #main-doc {
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+
+  #navbar > header {
+    background-color: rgb(231, 231, 231);
+  }
+
+  .main-section > header {
+    text-align: center;
+  }
+
+  #Ref-list > li {
+    list-style: none;
+    text-align: center;
+  }
+}
